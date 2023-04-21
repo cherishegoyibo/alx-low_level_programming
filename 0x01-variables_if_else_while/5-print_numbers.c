@@ -1,6 +1,7 @@
 #include <stdio.h>
+
 /**
- * main -Print all single digit numbers of base ten
+ * main - print single digit numbers of base ten
  *
  * Return: 0
  */
@@ -12,6 +13,6 @@ int main(void)
 	{
 		printf("%d", n);
 	}
-	printf('\n');
+	printf("\n");
 	return (0);
 }
