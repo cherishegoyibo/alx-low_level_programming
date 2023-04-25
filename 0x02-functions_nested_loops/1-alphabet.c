@@ -2,7 +2,7 @@
 
 /**
  * main - print lowercase alphabet
- *
+ * print_alphabet: prototype
  * Return: 0
  */
 
