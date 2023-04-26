@@ -2,14 +2,14 @@
 
 /**
  * _abs - a program that computes absolute value of an integer
- *  @int: integer to be computed
+ *  @n: integer to be computed
  *
  *  Return: absolute value
  */
-int _abs(int)
+int _abs(n)
 {
-	if (int >= 0)
-		return (int);
+	if (n >= 0)
+		return (n);
 	else
-		return (-int);
+		return (-n);
 }
