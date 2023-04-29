@@ -10,19 +10,19 @@ void print_triangle(int size)
 {
 	int a, b, c;
 
-	if (size <= 0)
+	if (a == 1)
 	{
 		_putchar('\n');
 	}
 	else
 	{
-		for (a = 1; a <= size; a++)
+		for (a = 0; a <= size; a++)
 		{
-			for (b >= 1; b = size - a; b--)
+			for (b = 1; b < (size - a); b++)
 			{
 				_putchar(' ');
 			}
-			for (c = 1; c <= a; c++)
+			for (c = 0; c < a; c++)
 			{
 				_putchar('#');
 			}
