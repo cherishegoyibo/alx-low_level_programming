@@ -1,4 +1,4 @@
-#iclude "main.h"
+#include "main.h"
 /**
  * reverse_array - reverse array
  * @a: array
@@ -8,13 +8,12 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
-	int j;
+	int i, temp;
 
 	for (i = 0; i < n--; i++)
 	{
-		j = a[i];
-		a[i] = a[n];
-		a[n] = j;
+		temp = *(a + i);
+		*(a + i) = *(a + n);
+		*(a + n) = temp;
 	}
 }
