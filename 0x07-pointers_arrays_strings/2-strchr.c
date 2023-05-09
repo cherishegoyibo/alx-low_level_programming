@@ -6,9 +6,9 @@
  *
  * Return: a pointer to the first occurrence of the character, or 0
  */
-char *_strchr(char *s, char c);
+char *_strchr(char *s, char c)
 {
-	while (*s)
+	while (*s != '\0')
 	{
 		if (*s != c)
 			s++;
