@@ -43,7 +43,7 @@ int _strlen_recursion(char *s)
  */
 int _palindrome(char *s, int i, int j)
 {
-	if (s[1] != s[j - 1])
+	if (s[i] != s[j - 1])
 	{
 		return (0);
 	}
