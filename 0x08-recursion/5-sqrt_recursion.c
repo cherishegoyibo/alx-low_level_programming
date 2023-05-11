@@ -10,6 +10,8 @@ int _sqrt_recursion(int n)
 {
 	int nat_sqrt_recursion(int n, int sq);
 
+	int sq = 1;
+
 	if (n < 0)
 	{
 		return (-1);
