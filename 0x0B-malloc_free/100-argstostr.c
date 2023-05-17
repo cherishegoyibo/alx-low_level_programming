@@ -39,6 +39,5 @@ char *argstostr(int ac, char **av)
 		temp++;
 	}
 
-	*temp = '\0';
 	return (res);
 }
