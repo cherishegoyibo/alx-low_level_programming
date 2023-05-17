@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 	}
 	totlen++;
 
-	res = (char *)malloc(totlen * sizeof(char));
+	res = malloc(totlen * sizeof(char));
 	if (res == NULL)
 		return (NULL);
 
@@ -32,12 +32,12 @@ char *argstostr(int ac, char **av)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
-			*temp = av[i][j];
-			temp++;
+			*res = av[i][j];
+			res++;
 		}
-		*temp = '\n';
-		temp++;
+		*res = '\n';
+		res++;
 	}
 
-	return (res);
+	return (temp);
 }
