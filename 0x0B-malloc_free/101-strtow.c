@@ -31,10 +31,12 @@ char **strtow(char *str)
 	char **word, *temp;
 	int i, j = 0, k = 0, count, strlen = 0, start, end;
 
-	if (str == NULL || *str == '\0')
+	while (*(str + strlen))
+		strlen++;
+	count = count_word(str);
+	if (count == 0)
 		return (NULL);
 
-	count = count_word(str);
 	word = (char **)malloc((count + 1) * (sizeof(char *)));
 	if (word == NULL)
 		return (NULL);
