@@ -23,7 +23,7 @@ char *argstostr(int ac, char **av)
 	}
 	totlen++;
 
-	res = (char *)malloc((totlen + 1) * sizeof(char));
+	res = (char *)malloc(totlen * sizeof(char));
 	if (res == NULL)
 		return (NULL);
 
