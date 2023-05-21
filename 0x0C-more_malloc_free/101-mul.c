@@ -59,6 +59,7 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 	{
 		return (NULL);
 	}
+	return (dest);
 }
 
 /**
