@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -47,28 +47,28 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *newdog;
+	dog_t *dog;
 	int len1, len2;
 
 	len1 = _strlen(name);
 	len2 = _strlen(owner);
 
-	newdog = malloc(sizeof(dog_t));
-	if (newdog == NULL)
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
 		return (NULL);
 
-	newdog->name = malloc(sizeof(char) * (len1 + 1));
-	newdog->owner = malloc(sizeof(char) * (len2 + 1));
-	if (newdog->name == NULL || newdog->owner == NULL)
+	dog->name = malloc(sizeof(char) * (len1 + 1));
+	dog->owner = malloc(sizeof(char) * (len2 + 1));
+	if (dog->name == NULL || dog->owner == NULL)
 	{
-		free(newdog);
-		free(newdog->name);
-		free(newdog->owner);
+		free(dog);
+		free(dog->name);
+		free(dog->owner);
 		return (NULL);
 	}
-	_strcpy(newdog->name, name);
-	_strcpy(newdog->owner, owner);
-	newdog->age = age;
+	_strcpy(dog->name, name);
+	_strcpy(dog->owner, owner);
+	dog->age = age;
 
-	return (newdog);
+	return (dog);
 }
