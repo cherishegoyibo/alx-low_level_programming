@@ -10,7 +10,7 @@
 size_t free_listint_safe(listint_t **h)
 {
 	listint_t *temp, *curr;
-	size_t count = 0;
+	unsigned int count = 0;
 
 	curr = *h;
 	while (curr != NULL)
