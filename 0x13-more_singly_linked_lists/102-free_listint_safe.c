@@ -9,10 +9,10 @@
 
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *temp, *curr;
+	listint_t *temp, curr;
 	unsigned int count = 0;
 
-	curr = *h;
+	curr = h;
 	while (curr != NULL)
 	{
 		temp = curr->next;
