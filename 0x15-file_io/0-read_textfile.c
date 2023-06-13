@@ -28,20 +28,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	byteread = read(fd, buffer, letters);
+	close(fd);
 	if (byteread == -1)
 	{
 		free(buffer);
-		close(fd);
 		return (0);
 	}
 
 	buffer[byteread] = '\0';
-
+	close(fd);
 	bytewrite = write(STDOUT_FILENO, buffer, byteread);
+	free(buffer);
 	if (bytewrite != byteread)
 	{
-		free(buffer);
-		close(fd);
 		return (0);
 	}
 
