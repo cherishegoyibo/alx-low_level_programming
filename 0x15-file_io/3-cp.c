@@ -63,16 +63,23 @@ int main(int argc, char *argv[])
 	while ((byte_read = read(fd_from, buffer, BUFF_SIZE)) > 0)
 	{
 		if (byte_read == -1)
+		{
 			print_error(-1, -1, argv[1], 'O');
-
-		byte_write = write(fd_to, buffer, byte_read);
-		if (byte_write == -1)
-			print_error(-1, -1, argv[2], 'W');
+		}
+		else
+		{
+			byte_write = write(fd_to, buffer, byte_read);
+			if (byte_write == -1)
+			{
+				print_error(-1, -1, argv[2], 'W');
+			}
+		}
 	}
+	if (byte_read == -1)
+		print_error(-1, -1, argv[1], '0');
 
 	if (close(fd_from) == -1)
 		print_error(-1, fd_from, NULL, 'C');
-
 	if (close(fd_to) == -1)
 		print_error(-1, fd_to, NULL, 'C');
 
