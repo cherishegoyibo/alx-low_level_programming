@@ -47,7 +47,6 @@ int main(int argc, char *argv[])
 	int fd_from, fd_to;
 	ssize_t byte_read, byte_write;
 	char buffer[BUFF_SIZE];
-	mode_t old_umask = umask(0);
 
 	if (argc != 3)
 	{
@@ -56,10 +55,9 @@ int main(int argc, char *argv[])
 	}
 
 	fd_from = open(argv[1], O_RDONLY);
-	print_error(fd_from, -1, argv[1], '0');
+	print_error(fd_from, -1, argv[1], 'O');
 
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
-	umask(old_umask);
 	print_error(fd_to, -1, argv[2], 'W');
 
 	while ((byte_read = read(fd_from, buffer, BUFF_SIZE)) > 0)
